@@ -11,7 +11,6 @@ export const Header = () => {
         <nav className="flex max-lg:hidden absolute left-1/2 -translate-x-1/2 items-center justify-center gap-x-10">
           {[
             { label: "Как это работает", href: "#how" },
-            { label: "Условия", href: "#terms" },
             { label: "Вопросы", href: "#faq" },
             { label: "Контакты", href: "#contact" },
           ].map((item) => (
