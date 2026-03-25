@@ -42,7 +42,7 @@ export default function Admin() {
   };
 
   const load = async (pwd: string) => {
-    const r = await fetch(func2url.banners + "/admin", { headers: { "X-Admin-Token": pwd } });
+    const r = await fetch(func2url.banners, { headers: { "X-Admin-Token": pwd, "X-Admin-Mode": "true" } });
     if (r.status === 401) { setError("Неверный пароль"); return false; }
     const data = await r.json();
     const parsed = typeof data === "string" ? JSON.parse(data) : data;
@@ -60,7 +60,7 @@ export default function Admin() {
     if (!editing) return;
     setSaving(true);
     const method = editing.id ? "PUT" : "POST";
-    await fetch(func2url.banners + "/admin", { method, headers, body: JSON.stringify(editing) });
+    await fetch(func2url.banners, { method, headers: { ...headers, "X-Admin-Mode": "true" }, body: JSON.stringify(editing) });
     await load(password);
     setEditing(null);
     setSaving(false);
@@ -68,7 +68,7 @@ export default function Admin() {
 
   const remove = async (id: number) => {
     if (!confirm("Удалить баннер?")) return;
-    await fetch(func2url.banners + "/admin", { method: "DELETE", headers, body: JSON.stringify({ id }) });
+    await fetch(func2url.banners, { method: "DELETE", headers: { ...headers, "X-Admin-Mode": "true" }, body: JSON.stringify({ id }) });
     await load(password);
   };
 
