@@ -28,7 +28,7 @@ export function BannersSection() {
 
   if (loading) {
     return (
-      <section id="apply" className="py-24 container mx-auto px-4">
+      <section id="apply" className="relative z-10 bg-background py-24 container mx-auto px-4">
         <div className="text-center text-foreground/40 font-mono text-sm">Загрузка...</div>
       </section>
     );
@@ -37,7 +37,7 @@ export function BannersSection() {
   if (banners.length === 0) return null;
 
   return (
-    <section id="apply" className="py-24 container mx-auto px-4">
+    <section id="apply" className="relative z-10 bg-background py-24 container mx-auto px-4">
       <div className="text-center mb-14">
         <p className="font-mono text-xs uppercase tracking-widest text-foreground/40 mb-4">Партнёры</p>
         <h2 className="text-4xl md:text-5xl font-sentient">

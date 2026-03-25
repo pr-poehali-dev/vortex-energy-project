@@ -27,7 +27,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how" className="py-24 border-t border-white/10">
+    <section id="how" className="py-24 border-t border-white/10 relative z-10 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="font-mono text-xs uppercase tracking-widest text-foreground/40 mb-4">Процесс</p>

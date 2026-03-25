@@ -8,7 +8,7 @@ export function Hero() {
   const [hovering, setHovering] = useState(false);
 
   return (
-    <div className="flex flex-col h-svh justify-between relative z-10">
+    <div className="flex flex-col min-h-svh justify-between relative z-10">
       <GL hovering={hovering} />
       <Header />
 

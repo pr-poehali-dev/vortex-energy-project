@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon";
 
 export function Contacts() {
   return (
-    <section id="contact" className="py-24 border-t border-white/10">
+    <section id="contact" className="relative z-10 bg-background py-24 border-t border-white/10">
       <div className="container mx-auto px-4 max-w-3xl text-center">
         <p className="font-mono text-xs uppercase tracking-widest text-foreground/40 mb-4">Контакты</p>
         <h2 className="text-4xl md:text-5xl font-sentient mb-4">
